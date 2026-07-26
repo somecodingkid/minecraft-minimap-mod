@@ -1,1 +1,24 @@
-{\n  "name": "minecraft-minimap-mod",\n  "version": "1.0.0",\n  "description": "Lightweight rotating square minimap mod for Minecraft Bedrock 1.21.133",\n  "main": "scripts/index.ts",\n  "scripts": {\n    "build": "tsc",\n    "watch": "tsc --watch",\n    "lint": "eslint scripts/**/*.ts"\n  },\n  "keywords": [\n    "minecraft",\n    "bedrock",\n    "minimap",\n    "mod",\n    "navigation",\n    "waypoints"\n  ],\n  "author": "somecodingkid",\n  "license": "MIT"\n}\n
+{
+  "name": "minecraft-minimap-mod",
+  "version": "1.0.0",
+  "description": "Lightweight rotating square minimap mod for Minecraft Bedrock 1.21.133",
+  "main": "scripts/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "npm run build"
+  },
+  "keywords": [
+    "minecraft",
+    "bedrock",
+    "minimap",
+    "mod"
+  ],
+  "author": "somecodingkid",
+  "license": "MIT",
+  "devDependencies": {
+    "@minecraft/server": "^1.8.0",
+    "@minecraft/server-ui": "^1.2.0",
+    "typescript": "^5.0.0"
+  }
+}
