@@ -1,0 +1,1 @@
+node_modules/\ndist/\nbuild/\n*.mcaddon\n*.mcpack\n.vscode/\n.idea/\n.DS_Store\n*.log\n
