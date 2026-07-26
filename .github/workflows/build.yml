@@ -1,0 +1,26 @@
+name: Build .mcaddon
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - run: npm install
+    - run: npm run build
+    - run: |
+        mkdir -p build_mcaddon/scripts/minimap
+        cp manifest.json build_mcaddon/
+        cp -r dist/* build_mcaddon/scripts/
+        cd build_mcaddon
+        zip -r ../minecraft-minimap-mod.mcaddon .
+    - uses: actions/upload-artifact@v3
+      with:
+        name: minecraft-minimap-mod
+        path: minecraft-minimap-mod.mcaddon
